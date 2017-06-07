@@ -1,0 +1,30 @@
+{
+  "groups": [{
+    "name": "app",
+    "type": "co.edu.udistrital.finalseg.AppProperties",
+    "sourceType": "co.edu.udistrital.finalseg.AppProperties"
+  }],
+  "properties": [
+    {
+      "name": "app.encryp-key",
+      "type": "java.lang.String",
+      "sourceType": "co.edu.udistrital.finalseg.AppProperties"
+    },
+    {
+      "name": "app.encrypt-folder",
+      "type": "java.lang.String",
+      "sourceType": "co.edu.udistrital.finalseg.AppProperties"
+    },
+    {
+      "name": "app.recieve-folder",
+      "type": "java.lang.String",
+      "sourceType": "co.edu.udistrital.finalseg.AppProperties"
+    },
+    {
+      "name": "app.upload-folder",
+      "type": "java.lang.String",
+      "sourceType": "co.edu.udistrital.finalseg.AppProperties"
+    }
+  ],
+  "hints": []
+}

@@ -1,0 +1,87 @@
+
+<div class="controles">
+<form role="form">
+ <div class="form-group">
+      <label for="servidor">Servidor</label>
+      <input id="servidor" ng-model="servidor" type="text" ng-change="" style="width: 300px;" />      
+
+      <button type="button" ng-click="consultarExternos()" class="btn btn-primary">Comprobar conexion</button>
+      <button type="button" ng-click="consultarExternos()" class="btn btn-primary">Actualizar conexion</button>
+     
+      <div id="msg" class="alert alert-dismissable fade in" >
+        <strong>{{mensaje}} </strong>
+      </div>
+ </div>
+  
+  
+</form>
+</div>
+ 
+<div class ="container-fluid">
+  <div class ="row">
+<div class="panel panel-default col-md-6 col-sm-6" style="height: 400px;">
+  <div class="panel-heading">Ubicación de archivos en servidor origen {{rutaLocalUpload}}</div>
+  <div class="panel-body">
+
+      <table class="table" >
+          <thead>
+            <tr>
+              <th>Nombre de archivo</th>
+              <th>Tamaño</th>
+              <th>Tipo</th>
+              <th>Accion</th>
+            </tr>
+          </thead>
+          <tbody>
+             <tr ng-repeat="file in listaLocal">
+                 <td>{{file.filename}}</td>
+                 <td>{{file.filesize}}</td>
+                 <td>{{file.filetype}}</td>
+              <td>
+                    <button type="button" ng-click='enviarArchivo(file)' class="btn btn-success btn-xs"><span class="glyphicon glyphicon-upload"></span> enviar</button>
+                              <button type="button" ng-click="eliminarArchivo(file)" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span> eliminar</button>
+
+              </td>
+            </tr>      
+          </tbody>
+        </table>
+
+  </div>
+
+
+
+</div>
+   
+        <div class="panel panel-default col-md-6 col-sm-6" style="height: 400px;">
+              <div class="panel-heading">Ubicación de archivos en servidor destino  {{rutaExternaRecieve}}</div>
+              <div class="panel-body">
+                    
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Nombre de archivo</th>
+                          <th>Tamaño</th>
+                          <th>Tipo</th>
+                          <th>Acción</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <tr ng-repeat="file in listaExterna">
+                             <td>{{file.filename}}</td>
+                             <td>{{file.filesize}}</td>
+                             <td>{{file.filetype}}</td>
+                          <td>
+                                <button type="button" ng-click="enviarArchivo('Hoja de vida.pdf')" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-download"></span> Solicitar</button>                                        
+
+                          </td>
+                        </tr>      
+                      </tbody>
+                    </table>
+
+              </div>
+            </div>
+   
+  </div>
+</div>
+

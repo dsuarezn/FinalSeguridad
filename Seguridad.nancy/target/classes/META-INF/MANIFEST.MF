@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: seguridad.nancy
+Implementation-Version: 1.0
+Built-By: Usuario
+Implementation-Vendor-Id: co.edu.udistrital
+Build-Jdk: 1.8.0_60
+Implementation-URL: http://projects.spring.io/spring-boot/seguridad.na
+ ncy/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
